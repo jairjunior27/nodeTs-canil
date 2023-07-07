@@ -18,6 +18,6 @@ Server.use(express.static(path.join(__dirname,'../public')))
 Server.use(mainRoutes)
 
 Server.use((req,res)=>{
-    res.send('pagina não encontrada')
+    res.render('pages/404')
 })
 Server.listen(process.env.PORT)
